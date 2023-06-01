@@ -1,0 +1,1 @@
+A template for a simple modal feedback form in vanilla js.  
