@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Feedback form</title>
+</head>
+
+<body>
+    <button class="button" onclick="openModal()">Открыть форму обратной связи</button>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <h2>Форма обратной связи</h2>
+            <form id="feedbackForm" onsubmit="submitForm(event)">
+                <div class="form-item">
+                    <label for="phone">Номер телефона:</label><br>
+                    <input type="text" id="phone" maxlength="18" placeholder="+7 (999) 999-99-99">
+                    <span id="errorPhone" class="error-message"></span>
+                </div>
+                <div class="form-item">
+                    <label for="name">Имя:</label><br>
+                    <input type="text" id="name">
+                    <span id="errorName" class="error-message"></span>
+                </div>
+                <div class="form-item">
+                    <label for="message">Сообщение:</label><br>
+                    <textarea id="message" cols="50" rows="9"></textarea>
+                </div>
+                <input type="submit" value="Отправить">
+            </form>
+            <div id="json">
+                <!-- <button onclick="hideJson()">Вернуться на форму</button> -->
+            </div>
+            <div id="successMessage" class="success-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
